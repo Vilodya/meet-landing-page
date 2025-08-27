@@ -1,0 +1,213 @@
+@use 'reset';
+
+@use 'fonts';
+@use 'mixins' as *;
+
+@use 'footer';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-700);
+  background-image: url('/images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media (min-width: 992px) {
+    background-image: url('/images/bg-desktop.svg');
+    background-size: cover;
+  }
+}
+
+.hero {
+  margin: 40px 36px;
+  color: var(--white);
+  display: grid;
+
+  @media (min-width: 768px) {
+    margin: 40px 80px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1272px;
+    margin: 64px 80px 43px;
+  }
+  
+  &__logo-link {
+    display: inline-block;
+    justify-self: start;
+    width: 125px;
+
+    @media (min-width: 1024px) {
+      width: 210px;
+    }
+  }
+
+  &__logo {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: var(--spacing-700);
+    margin-top: var(--spacing-800);
+
+    @media (min-width: 768px) {
+      gap: var(--spacing-500);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      gap: var(--spacing-700);
+      margin-top: 87px;
+    }
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      max-width: 608px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 696px;
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__content {
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    @include text-preset-2;
+
+    @media (min-width: 768px) {
+      @include text-preset-1;
+    }
+  }
+
+  &__text {
+    margin-top: var(--spacing-300);
+    @include text-preset-5;
+
+    @media (min-width: 768px) {
+      @include text-preset-4;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 200px;
+    margin-top: var(--spacing-400);
+    border-radius: 20px;
+    padding: 11px 0;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.25);
+    color: var(--purple-700);
+    text-align: center;
+    background-color: var(--white);
+    @include text-preset-6;
+
+    @media (min-width: 768px) {
+      margin-top: var(--spacing-500);
+      border-radius: 28px;
+      padding: 15px 0;
+      @include text-preset-3;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:focus-visible,
+    &:hover {
+      color: var(--white);
+      background-color: var(--magenta-400);
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-self: center;
+    gap: var(--spacing-200);
+    margin-top: var(--spacing-800);
+
+    @media (min-width: 768px) {
+      margin-top: var(--spacing-500);
+    }
+
+    @media (min-width: 1024px) {
+      justify-self: end;
+      margin-top: var(--spacing-300);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &:focus {
+      outline: 0;
+    }
+
+    @media (min-width: 768px) {
+      width: var(--spacing-500);
+      height: var(--spacing-500);
+    }
+
+    &--facebook {
+      background-image: url('/images/facebook.png');
+
+      &:focus-visible,
+      &:hover {
+        background-image: url('/images/facebook--hover.png');
+      }
+    }
+
+    &--twitter {
+      background-image: url('/images/twitter.png');
+
+      &:focus-visible,
+      &:hover {
+        background-image: url('/images/twitter--hover.png');
+      }
+    }
+
+    &--instagram {
+      background-image: url('/images/instagram.png');
+
+      &:focus-visible,
+      &:hover {
+        background-image: url('/images/instagram--hover.png');
+      }
+    }
+  }
+}
