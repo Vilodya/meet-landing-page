@@ -1,39 +1,66 @@
 @mixin text-base {
   font-family: var(--main-font);
-  font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  font-weight: var(--font-weight-400);
 }
 
 @mixin text-preset-1 {
   @include text-base;
-  font-family: var(--accent-font);
-  font-weight: var(--font-weight-600);
-  line-height: 1.25;
-  font-size: 40px;
+  font-weight: var(--font-weight-900);
+  font-size: var(--font-size-xl);
+
+  @media (min-width: 768px) {
+    font-size: var(--font-size-xxl);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--font-size-xxxl);
+  }
 }
 
 @mixin text-preset-2 {
-  @include text-preset-1;
-  font-size: 24px;
+  @include text-base;
+  font-weight: var(--font-weight-900);
+  font-size: var(--font-size-m);
+
+  @media (min-width: 768px) {
+    font-size: var(--font-size-l);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--font-size-xl);
+  }
 }
 
 @mixin text-preset-3 {
   @include text-base;
-  font-family: var(--accent-font);
+  font-weight: var(--font-weight-900);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--font-size-sm);
+  }
 }
 
 @mixin text-preset-4 {
   @include text-base;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-500);
+  line-height: 1.5;
+
+  @media (min-width: 1024px) {
+    font-size: var(--font-size-base);
+  }
 }
 
 @mixin text-preset-5 {
   @include text-base;
-  font-size: 16px;
-}
-
-@mixin text-preset-6 {
-  @include text-base;
-  font-family: var(--accent-font);
-  font-size: 12px;
+  font-weight: var(--font-weight-900);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
 }

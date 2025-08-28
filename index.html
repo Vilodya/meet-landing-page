@@ -6,39 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Landing Page</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <a href="#" class="header__logo logo">
-        <img src="/images/logo.svg" alt="" class="logo__image">
+        <img src="/images/logo.svg" alt="Meet" class="logo__image">
       </a>
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero__title">Group Chat for Everyone</h1>
-        <p class="hero__text">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-        <a href="#" class="btn btn--primary">Download<span class="btn__version">v1.3</span></a>
-        <a href="#" class="btn btn--secondary">What is it?</a>
+        <div class="hero__left-image">
+          <img src="/images/desktop/image-hero-left.png" alt="Avatars of some Users">
+        </div>
+        <div class="hero__right-image">
+          <img src="/images/desktop/image-hero-right.png" alt="Avatars of some Users">
+        </div>
+        <div class="hero__content">
+          <h1 class="hero__title">Group Chat for Everyone</h1>
+          <p class="hero__text">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+          <div class="btn-block">
+            <a href="#" class="btn btn--primary">Download <span class="btn__version">v1.3</span></a>
+            <a href="#" class="btn btn--secondary">What is it?</a>
+          </div>
+        </div>
       </section>
-      <div class="divider">
-        <div class="divider__number">01</div>
-      </div>
       <section class="features">
-        <div class="features__label">Built for modern use</div>
-        <h2 class="features__title">Smarter meetings, all in one place</h2>
-        <p class="features__text">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+        <div class="features__container">
+          <div class="divider" aria-hidden="true">
+            <div class="divider__number">01</div>
+          </div>
+          <div class="features__grid">
+            <div class="features__grid-item">
+              <img src="/images/desktop/image-woman-in-videocall.jpg" alt="Woman in videocall" class="features__grid-image" loading="lazy">
+            </div>
+            <div class="features__grid-item">
+              <img src="/images/desktop/image-women-videochatting.jpg" alt="Woman videochatting" class="features__grid-image" loading="lazy">
+            </div>
+            <div class="features__grid-item">
+              <img src="/images/desktop/image-men-in-meeting.jpg" alt="Man in meeting" class="features__grid-image" loading="lazy">
+            </div>
+            <div class="features__grid-item">
+              <img src="/images/desktop/image-man-texting.jpg" alt="Man texting" class="features__grid-image" loading="lazy">
+            </div>
+          </div>
+          <div class="features__content">
+            <div class="features__label">Built for modern use</div>
+            <h2 class="features__title">Smarter meetings, all in one place</h2>
+            <p class="features__text">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="divider">
+      <div class="divider" aria-hidden="true">
         <div class="divider__number">02</div>
       </div>
       <section class="cta">
-        <h2 class="cta__title">Experience more together</h2>
-        <p class="cta__text">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-        <a href="#" class="btn btn--secondary">Download<span class="btn__version">v1.3</span></a>
+        <div class="cta__content">
+          <h2 class="cta__title">Experience more together</h2>
+          <p class="cta__text">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+          <a href="#" class="btn btn--secondary">Download <span class="btn__version">v1.3</span></a>
+        </div>
       </section>
       <div class="attribution">
-        Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a class="attribution__link" href="https://github.com/Vilodya" target="_blank">Vilodya</a>.
       </div>
     </footer>
